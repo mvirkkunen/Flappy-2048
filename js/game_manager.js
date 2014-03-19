@@ -264,6 +264,12 @@ GameManager.prototype.timer = function () {
 
   setTimeout(function () {self.timer();}, 384 / Math.sqrt(this.score + 256));
   this.actuate();
+
+  // this has got to be the laziest AI ever
+
+  var wall = (steppos > 59/64) ? this.cd : this.ab; // threshold guesstimated
+
+  if (this.birdpos > wall / 4 + 0.25) this.jump();
 }
 
 GameManager.prototype.jump = function () {
