@@ -32,9 +32,9 @@ KeyboardInputManager.prototype.listen = function () {
     }
   }
 
-  document.addEventListener("keydown", dojump);
-  document.addEventListener("click", dojump);
-  document.addEventListener("touchend", dojump);
+  //document.addEventListener("keydown", dojump);
+  //document.addEventListener("click", dojump);
+  //document.addEventListener("touchend", dojump);
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
